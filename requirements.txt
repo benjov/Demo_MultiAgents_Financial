@@ -1,5 +1,5 @@
 crewai
-crewai_tools==0.1.5
+crewai_tools==0.1.6
 chromadb==0.4.15
 pydantic
 tiktoken
