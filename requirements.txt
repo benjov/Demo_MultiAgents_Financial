@@ -12,3 +12,4 @@ pandas
 IPython
 streamlit
 setuptools
+bs4
