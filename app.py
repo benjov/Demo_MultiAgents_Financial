@@ -19,12 +19,7 @@ import sys
 import io
 import streamlit as st
 import pandas as pd
-# Instalar crewai_tools si no está instalado SOLO PARA LA VERSIÓN ONLINE
-try:
-    import crewai_tools
-except ImportError:
-    subprocess.run(["pip", "install", "crewai_tools"])
-from crewai_tools import ScrapeWebsiteTool, SerperDevTool
+from crewai_tools import SerperDevTool, ScrapeWebsiteTool
 #from IPython.display import Markdown
 
 # 
