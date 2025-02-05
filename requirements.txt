@@ -1,8 +1,8 @@
 crewai
+crewai_tools
 chromadb==0.4.15
 pydantic
 tiktoken
-crewai_tools
 langchain_community
 crewai
 langchain
