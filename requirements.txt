@@ -1,0 +1,13 @@
+crewai
+crewai_tools
+langchain_community
+crewai
+langchain
+langchain_openai
+openai
+pandas
+crewai_tools
+IPython
+streamlit
+langchain_community
+setuptools
