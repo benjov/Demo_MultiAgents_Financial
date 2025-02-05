@@ -1,5 +1,5 @@
 crewai
-crewai_tools
+crewai-tools
 chromadb==0.4.15
 pydantic
 tiktoken
@@ -11,5 +11,4 @@ openai
 pandas
 IPython
 streamlit
-langchain_community
 setuptools
