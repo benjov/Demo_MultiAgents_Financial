@@ -13,7 +13,8 @@ from pydantic import (
 )
 from pydantic import BaseModel as PydanticBaseModel
 
-from crewai.tools.structured_tool import CrewStructuredTool
+#from crewai.tools.structured_tool import CrewStructuredTool
+from structured_tool import CrewStructuredTool
 
 # Ignore all "PydanticDeprecatedSince20" warnings globally
 warnings.filterwarnings("ignore", category=PydanticDeprecatedSince20)
