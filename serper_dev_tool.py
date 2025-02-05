@@ -5,7 +5,8 @@ import os
 from typing import Any, Type
 
 import requests
-from crewai.tools import BaseTool
+#from crewai.tools import BaseTool
+from base_tool import BaseTool
 from pydantic import BaseModel, Field
 
 logging.basicConfig(
