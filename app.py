@@ -18,7 +18,9 @@ import sys
 import io
 import streamlit as st
 import pandas as pd
-from crewai_tools import ( SerperDevTool, ScrapeWebsiteTool )
+#from crewai_tools import SerperDevTool, ScrapeWebsiteTool
+from scrape_website_tool import ScrapeWebsiteTool
+from serper_dev_tool import SerperDevTool
 
 # 
 # Configuración de la App
@@ -26,6 +28,9 @@ TITLE = "Colaboración Multiagente para el Análisis Financiero"
 st.set_page_config(page_title = TITLE, page_icon = "📊", )
 st.title(TITLE)
 
+# **Agregar Imagen en la Barra Lateral**
+st.sidebar.image("images/Logo_AB.png", use_container_width=True)  # Ruta a la imagen
+st.sidebar.markdown("Contact: vicente@analiticaboutique.com.mx benjamin@analiticaboutique.com.mx")
 # Barra lateral - Selección del modelo de OpenAI
 st.sidebar.title("Configuración del Modelo")
 
@@ -41,12 +46,12 @@ model_option = st.sidebar.selectbox(
 #
 os.environ["OPENAI_MODEL_NAME"] = model_option
 # Obtener las API keys desde .env
-openai_api_key = os.getenv("OPENAI_API_KEY")
-serper_api_key = os.getenv("SERPER_API_KEY")
+#openai_api_key = os.getenv("OPENAI_API_KEY")
+#serper_api_key = os.getenv("SERPER_API_KEY")
 
 # Obtener las API keys desde SECRETS
-#openai_api_key = st.secrets["OPENAI_API_KEY"]
-#serper_api_key = st.secrets["SERPER_API_KEY"]
+openai_api_key = st.secrets["OPENAI_API_KEY"]
+serper_api_key = st.secrets["SERPER_API_KEY"]
 
 # Descripción de la app
 st.title("📊 AI Agents para Análisis de Trading")
