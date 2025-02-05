@@ -14,18 +14,13 @@ from crewai import Agent, Task, Crew, Process
 from langchain_openai import ChatOpenAI
 from langchain_community.chat_message_histories import StreamlitChatMessageHistory
 import os
-import subprocess
 import sys
 import io
 import streamlit as st
 import pandas as pd
 
-try:
-    import crewai_tools
-except ImportError:
-    subprocess.run(["pip", "install", "crewai_tools"])
-    
-from crewai_tools import SerperDevTool, ScrapeWebsiteTool
+from crewai.tools import SerperDevTool, ScrapeWebsiteTool  # Replace with actual tool imports
+#from crewai_tools import SerperDevTool, ScrapeWebsiteTool
 
 # 
 # Configuración de la App
