@@ -19,9 +19,13 @@ import sys
 import io
 import streamlit as st
 import pandas as pd
-#from crewai_tools import SerperDevTool
-from crewai_tools import ScrapeWebsiteTool
-#from IPython.display import Markdown
+
+try:
+    import crewai_tools
+except ImportError:
+    subprocess.run(["pip", "install", "crewai_tools"])
+    
+from crewai_tools import SerperDevTool, ScrapeWebsiteTool
 
 # 
 # Configuración de la App
